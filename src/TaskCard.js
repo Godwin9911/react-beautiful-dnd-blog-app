@@ -1,6 +1,6 @@
-import React from 'react';
-import { Draggable } from 'react-beautiful-dnd';
-import styled from '@emotion/styled';
+import React from "react";
+import { Draggable } from "react-beautiful-dnd";
+import styled from "@emotion/styled";
 // import CustomAvatar from '../TableComponents/CustomAvatar'
 // import { ReactComponent as RedArrow } from '../../assets/icons/High.svg'
 // import { ReactComponent as YellowArrow } from '../../assets/icons/Medium.svg'
@@ -12,13 +12,14 @@ const TaskInformation = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding: 0 15px;
-  min-height: 106px;
+  min-height: 80px;
   border-radius: 5px;
   max-width: 311px;
+  border-radius: 0.25rem;
   /* background: ${({ isDragging }) =>
-    isDragging ? 'rgba(255, 59, 59, 0.15)' : 'white'}; */
+    isDragging ? "rgba(255, 59, 59, 0.15)" : "white"}; */
   background: white;
-  margin-top: 15px;
+  margin-bottom: 15px;
 
   .secondary-details {
     display: flex;
@@ -51,14 +52,15 @@ const TaskCard = ({ item, index }) => {
           {...provided.dragHandleProps}
         >
           <TaskInformation>
-            <p>{item.Task}</p>
+            <p>{item.name}</p>
+            {/*   <p>{item.id}</p> */}
             <div className="secondary-details">
               <p>
                 <span>
-                  {new Date(item.Due_Date).toLocaleDateString('en-us', {
+                  {/*  {new Date(item.Due_Date).toLocaleDateString('en-us', {
                     month: 'short',
                     day: '2-digit',
-                  })}
+                  })} */}
                 </span>
               </p>
             </div>

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Trello Client",
+  "name": "Create Trello Client Sample",
   "icons": [
     {
       "src": "favicon.ico",
