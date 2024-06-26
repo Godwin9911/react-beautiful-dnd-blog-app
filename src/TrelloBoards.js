@@ -8,7 +8,7 @@ const TrelloBoards = ({ setSelectedBoard, boards = [], setBoards }) => {
 
   const url = new URL(window.location.href);
 
-  const apiKey = "25eb7950bf43c6cc382ef32d357069c5"; // Replace with your actual API key
+  const apiKey = process.env.REACT_APP_TRELLO_API_KEY; // Replace with your actual API key
   const redirectUri = url.origin; // "http://localhost:3000"; // Replace with your actual redirect URI
 
   useEffect(() => {

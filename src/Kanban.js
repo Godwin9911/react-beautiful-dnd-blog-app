@@ -31,7 +31,6 @@ const TaskColumnStyles = styled.div`
 `;
 
 const Title = styled.span`
-  color: #10957d;
   background: rgba(16, 149, 125, 0.15);
   padding: 4px 12px;
   border-radius: 5px;
@@ -41,7 +40,7 @@ const Title = styled.span`
 `;
 
 // Your API key and token
-const apiKey = "25eb7950bf43c6cc382ef32d357069c5";
+const apiKey = process.env.REACT_APP_TRELLO_API_KEY;
 
 const Kanban = ({ selectedBoard, setSelectedBoard, setBoards }) => {
   const [columns, setColumns] = useState({});
